@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Portfolio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css\bootstrap.css'>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <style>
+        .bg-dark {
+            background:transparent !important;
+            transition:0.75s ease;
+        }
+        .bg-dark.scrolled {
+            background:#15151a !important;
+        }
+        main{
+          height: 250vh;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#tracking-navbar" data-offset="151">
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark font-weight-bold bg-dark" id="tracking-navbar">
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto my-2 pl-2">
+            <li class="nav-item fade-right">
+              <a class="nav-link p-0" href="#carousel">Home</a>
+            </li>
+            <li class="nav-item fade-right">
+              <a class="nav-link p-0" href="#about-me">About me</a>
+            </li>
+            <li class="nav-item fade-right">
+              <a class="nav-link p-0" href="#exp">Experience</a>
+            </li>
+            <li class="nav-item fade-right">
+              <a class="nav-link p-0" href="#projects" >Projects</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <!--Start of slider-->
+          <div class="carousel slide" data-ride="carousel" data-interval="7500">
+              <div class="carousel-inner" role="listbox" id="carousel">
+                  <div class="carousel-item active" style="background-image: url(images/photo.jpg);"></div>
+                  <div class="carousel-item " style="background-image: url(images/photo2.jpg);"></div>
+                  <div class="carousel-item " style="background-image: url(images/photo3.jpg);"></div>
+              </div>
+            
+          </div>
+        <!--End of slider-->
+
+        <!--Box with my name-->
+        <div class="d-flex justify-content-center w-100">
+            <div class="description-box main-white col-xl-5 col-lg-6 col-md-8 col-12 p-3">
+              <h1 class="display-2">Dawid Witczak</h1>
+              <hr class="my-2 mx-4" style="border:1px solid #ACADBC;">
+              <h1 class="header-2">Java Developer</h1>
+            </div>         
+        </div>
+        <!--End of box-->
+
+        <!--Start of introduction-->
+        <div class="description-section margin" id="about-me" >
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-12 mb-3 mb-lg-0"> 
+                <div class="desc-image d-flex justify-content-center h-100">
+                <img src="images/dawid.jpeg" class="w-75">
+                </div>
+                </div>
+                <div class="col-lg-6 col-12"> 
+                 <div class="desc-title" >
+                     <h2 class="font-weight-bold">How am I?</h2>
+                     <p>Hi, I'm Dawid,<br>I'm a 18 years old student from Poland. I'm currently in second year of high school at the programmer profile. 
+                       I have started programming 4 years ago. I mainly write in Java and Python, but also have some experince in C++ and React.</p>
+                     <h4 class="font-weight-bold">What I do?</h4>
+                     <p>I mainly create intermediate back-end applications in Java with a very simple front-end in Html5, CSS3 and Bootstrap.</p>
+                     <h4 class="font-weight-bold">My Hobbies</h4>
+                     <p>I'm a national team representative in castingsport. I'm currently hold World Champion title in fly accuracy. My other hobby is cycling. I cycle for a hour every day.</p>
+                     <h4 class="font-weight-bold">Check my projects!</h4>
+                     <button class="btn btn-outline-primary align-items-center d-flex p-2 " id="check-button" href="#projects"> Check <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right pl-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                     </svg></button>
+                </div>
+              </div>	
+            </div>
+          </div>
+        </div>
+        <!--End of introduction-->
+
+        <!--Hidden info-->
+        <div class="collapse main-grey text-light" id="hidden-exp"style="box-shadow:inset 0px -5px 20px -5px rgba(0,0,0,0.29);">
+          <div class="container-fluid mx-3 p-4">
+              Beside languages showed below i also have some experince in JavaScript, JQuery, C++ and React.<br>
+              I'm always open for learning new language or technology. I'm a fast learner and can adapt to situations farely easy.<br>
+
+
+          </div>
+        </div>
+        <a class="navbar main-grey sticky-bottom d-flex justify-content-center" href="#hidden-exp" role="button" data-toggle="collapse"  id="exp">
+          <div class="border-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" style="color:#ACADBC;">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </div>  
+        </a>
+        <!--End of Hidden info-->
+
+        <!--My Experience-->
+        <div class="main-grey row w-100 m-0 text-light exp">
+          <!--Java-->
+          <div class="container-fluid p-5 col-lg-9 col-sm-10 mx-lg-0 col-md-6 text-md-left text-center">
+            <img src="images/java.png" class="float-start col-xl-3 col-lg-4 col-md-6 float-md-center float-left">
+            <p class="custom-header">Java</p>
+            <p class="lead col-lg-10">
+              Level: Intermediate</br>Main language i have been using for over a year. <br>I have used it to create all sorts of back-end applications and small projects.
+            </p>
+              <div class="progress col-lg-8 col-md-12 p-0">
+                <div class="progress-bar" role="progressbar" data-length="70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color: rgb(4, 116, 188);"></div>
+              </div>
+          </div>
+          <!--Html/Css-->
+          <div class="container-fluid p-5 col-lg-9 col-sm-10 mx-lg-0 col-md-6 text-md-left text-center">
+            <img src="images/html.png" class="float-start col-xl-3 col-lg-4 col-md-6 float-md-center float-left">
+            <p class="custom-header">Html5/Css3 </p>
+            <p class="lead">
+              Level: Intermediate-Advanced</br>My main way of creating front-end for my apps.<br>Languages i have used at the start of my programming journey.
+            </p>
+              <div class="progress col-lg-8 col-md-12 p-0">
+                <div class="progress-bar" role="progressbar" data-length="55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color: #e44d26;"></div>
+              </div>
+          </div>
+          <!--Python-->
+          <div class="container-fluid p-5 col-lg-9 col-sm-10 mx-lg-0 col-md-6 text-md-left text-center">
+            <img src="images/python-3521655-2945099.png" class="float-start col-xl-3 col-lg-4 col-md-6 float-md-center float-left">
+            <p class="custom-header">Python</p>
+            <p class="lead">
+              Level: Intermediate</br>My first programming language, the true start of my journey.<br>It has helped me teach myself about object oriented programming and other basics.
+            </p>
+              <div class="progress col-lg-8 col-md-12 p-0">
+                <div class="progress-bar" role="progressbar" data-length="55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color: #f2bb30;"></div>
+              </div>
+          </div>
+          <!--Spring Boot-->
+          <div class="container-fluid p-5 col-lg-9 col-sm-10 mx-lg-0 col-md-6 text-md-left text-center">
+            <img src="images/spring.png" class="float-start col-xl-3 col-lg-4 col-md-6 float-md-center float-left">
+            <p class="custom-header">Spring Boot</p>
+            <p class="lead">
+              Level: Beginner</br>Java Framework i use to create all of back-end for my websites.<br>I have started using it little less than year ago.
+            </p>
+              <div class="progress col-lg-8 col-md-12 p-0">
+                <div class="progress-bar" role="progressbar" data-length="40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color: rgb(108, 188, 68);"></div>
+              </div>
+          </div>        
+        </div> 
+        <!--End of my experience-->
+
+        <!--Star of Projects-->
+        <h1 class="display-3 text-center pt-3">My Projects</h1>
+        <p class="d-hidden" id="projects" ></p>
+        <div class="col-12 p-0 project">
+          <div class="col-md-4 col-6 p-0 overflow-hidden float-left">
+            <span class="">Gra platformowa</span>
+            <img src="images/photo.jpg">
+          </div>
+          <div class="col-md-4 col-6 p-0 overflow-hidden float-left" >
+            <span class="">Gra platformowa</span>
+            <img src="images/photo.jpg">
+          </div>
+          <div class="col-md-4 col-12 p-0 overflow-hidden float-md-left" >
+            <span class="">Gra platformowa</span>
+            <img src="images/photo.jpg">
+          </div>
+        </div>
+        <!--End of Projects-->
+
+        <!--Start of footer-->
+        <footer class="text-center my-2">
+          <h1 class="display-3">Contact me</h1>
+          <div class="d-flex justify-content-center">
+            <!--First column-->
+          <span class="col-3 lead">
+            <a href="https://www.facebook.com/dawid.witczak.944/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-facebook mx-1" viewBox="0 0 16 16" style="color:#4267B2;">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com/DawidWitczak8" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-twitter mx-1" viewBox="0 0 16 16" style="color:#1DA1F2;">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UCdor7ApguejFLBBL1r0CE8g" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-youtube mx-1" viewBox="0 0 16 16" style="color:red;">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+              </svg>
+            </a>
+          </span>
+          
+          <!--Second column-->
+          <span class="col-3 lead column">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+              <span>+48 731 174 787</span></div>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+              </svg>
+            <span>witczak.dawid.2gp@gmail.com</span></div>
+          </span>
+          
+          <!--Third column-->
+          <span class="col-3 lead">
+              <h4 class="font-weight-bold">Got question to ask?</h4>
+              <a href="contact.html">
+                <button type="button" class="btn btn-outline-primary align-items-center d-flex mx-auto my-2 p-2 px-4">Ask it
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right pl-1" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                </button>
+              </a>
+          </span>
+        </div>
+        <p class="mt-4">
+          Copyright ©. All right reserved.
+        </p>
+        </footer>
+        <!--End of footer-->
+      </main>
+    <!--All of javascripts-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+      //Changing display size in progress bar
+      $('.custom-header').each((index,element)=>{
+        $(window).on("scroll ready resize",()=>{
+          $(element).toggleClass("display-2",$(this).width()>992).toggleClass("h1",$(this).width()<992);
+
+        })
+      })
+      
+      //Progressbar animation
+      function isScrolledIntoView(elem)
+      {
+          var docViewTop = $(window).scrollTop();
+          var docViewBottom = docViewTop + $(window).height();
+      
+          var elemTop = $(elem).offset().top;
+          var elemBottom = elemTop + $(elem).height();
+      
+          return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+      }
+      $(".progress-bar").each((index,element)=>{
+        let scrolled = false
+        $(window).on("scroll ready",()=>{
+          if(isScrolledIntoView(element) && !scrolled){
+            $(element).animate({
+            width:element.getAttribute("data-length")
+          },1000,"linear")
+          scrolled=true;
+          }
+        })       
+      })
+
+      //Smooth scroll
+      $(".nav-link").each((index,element)=>{
+        $(element).click(()=>{
+          $([document.documentElement, document.body]).animate({
+            scrollTop: ($(element.getAttribute("href")).offset().top-150)
+          }, 900);
+        })
+      });
+      $("#check-button").click(()=>{
+          $([document.documentElement, document.body]).animate({
+            scrollTop: ($($("#check-button").attr("href")).offset().top-150)
+          }, 900);
+        })
+      
+
+      //Animation of navbar
+      function animate(element){
+        $(element).css({"position":"relative","opacity": 0, "left":"-=100"});
+        $(element).animate({left:0, opacity:1},1200);
+      }
+      var time=200;
+      $(".fade-right").each((index,element)=>{
+    
+        setTimeout(()=>{ 
+            animate(element); 
+        }, time)
+        time += 200;
+      })
+
+      //Project hover animation
+      $(".project").children().each((index,element)=>{
+        $(element).hover((event)=>{ 
+          $(element).children("span").toggleClass("fillOpacity");
+          $(element).children().not($("span")).toggleClass("enlarge");
+          $(element).parent().children().not(element).toggleClass("blur");
+        })
+      })
+
+      //Appearing of navbar
+      $(window).on("scroll load resize",()=>{
+          $('nav').toggleClass('scrolled',$(this).width()<993||$(this).scrollTop()>150);
+          $(".column").find("span").toggleClass("break",$(this).width()<993);
+      })
+
+    </script>
+</body>
+</html>

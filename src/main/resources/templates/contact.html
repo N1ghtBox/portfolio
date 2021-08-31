@@ -6,12 +6,119 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css\bootstrap-grid.css'>
-    
+    <link rel='stylesheet' type='text/css' media='screen' href='css\bootstrap.css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <style>
+        main span{
+            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.6px 3.2px;
+            height:80vh;
+        }
+        main{
+            height: 100vh;
+            font-family:'Lato' !important;
+        }
+        .column{
+            background: linear-gradient(333deg, #1404f0 0%, #3836bb 100%);
+            height:100%;
+        }
+        button{
+            border-radius: 20px !important;
+            display: inline-block;
+            position:relative;
+            z-index: 1;
+            background-color: #fff;
+            width:12vw;
+            overflow:hidden;
+            border:none !important;
+        }
+        #circle{
+            position:absolute;
+            background:linear-gradient(333deg, #6257ff 0%, #302cfd 100%); 
+            opacity:0.3;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            border-radius:50%;
+            animation: animate 1s ease-out infinite;
+
+        }
+        button:focus,
+        button:active{
+            outline:none;
+        }
+        @keyframes animate{
+            0%{
+                height:0px;
+                width:0px;
+            }
+            100%{
+                height: 200px;
+                width:200px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <main class="d-flex justify-content-center align-items-center" id="contact">
+        <span class="col-8 p-0">
+            <div class="col-6 p-0 m-0 float-left column">
+                <form action="" method="POST" class="col-8 p-0 mx-auto" autocomplete="off">
+                    <h1 class="text-light mt-3">Send me a message</h1>
+                    <div class="wrapper my-3 col-12 px-0">
+                        <div class="input-data">
+                           <input type="text" name="name" class="col-12 p-0" required>
+                           <div class="underline" class="col-6"></div>
+                           <label>Name *</label>
+                        </div>
+                     </div>
+                     <div class="wrapper my-5 col-12 px-0">
+                        <div class="input-data">
+                           <input type="text" name="email" class="col-12 p-0" required>
+                           <div class="underline" class="col-6"></div>
+                           <label>E-mail *</label>
+                        </div>
+                     </div>
+                     <div class="textarea my-5 col-12 pt-4 mx-0 px-0">
+                            <textarea name="message" id="mess" cols="30" rows="10" class="col-12 p-0"></textarea>
+                            <div class="underline" class="col-6"></div>
+                            <label>Message<br></label>
+                     </div>
+                     <div class="col-12 text-center m-0 p-0">
+                        <button class="btn mx-auto p-2 text-muted">Send</button>
+                    </div>
+                </form> 
+                    
+            </div>
+            <div class="col-6 p-0 m-0 float-left">
+                
+            </div>
+        </span>
+    </main>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
+    <script>
+        
+        const button = document.querySelector("button");
+        button.addEventListener("click",(event)=>{
+            let x = event.pageX - $('button').offset().left;
+            let y = event.pageY - $('button').offset().top;
+            let circle = document.createElement("span");
+            circle.setAttribute("id","circle");
+            circle.style.top=y+"px";
+            circle.style.left=x+"px";
+            button.appendChild(circle);
+            setTimeout(()=>{
+                circle.remove();
+                $("button").closest("form").submit();
+            },1000)
+
+        })
+        
+        $("textarea").on("change",()=>{
+            $(".textarea").children("label").toggleClass("text-light",$("textarea").val()!="")
+            $(".textarea").children("div").toggleClass("valid",$("textarea").val()!="");
+        })
+    </script>
+
 </body>
 </html>

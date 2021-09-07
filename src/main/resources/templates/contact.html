@@ -10,10 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <style>
-        main span{
-            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.6px 3.2px;
-            height:80vh;
-        }
+
         main{
             height: 100vh;
             font-family:'Lato' !important;
@@ -22,13 +19,19 @@
             background: linear-gradient(333deg, #1404f0 0%, #3836bb 100%);
             height:100%;
         }
+        main span{
+            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.6px 3.2px;
+            height:80vh;
+        }
         button{
             border-radius: 20px !important;
             display: inline-block;
-            position:relative;
+            position:absolute;
+            left: 50%;
+            transform: translate(-50%,0 );
             z-index: 1;
             background-color: #fff;
-            width:12vw;
+            width:30%;
             overflow:hidden;
             border:none !important;
         }
@@ -56,14 +59,91 @@
                 width:200px;
             }
         }
+        form{
+            height:70vh;
+        }
+        @media (max-width:992px) {
+            .links div{
+                display:flex;
+                justify-content:center;
+                align-items: center;
+                border-radius: 50%;
+                -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.6px 3.2px;
+                box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.6px 3.2px;
+                width:70px;
+                height:70px;
+            }
+            .column{
+                max-height: 20vh;
+            }
+            main{
+                padding-top: 10vh;
+                height:120vh;
+            }
+        }
     </style>
 </head>
 <body>
-    <main class="d-flex justify-content-center align-items-center" id="contact">
+    
+    <main class="d-flex justify-content-center align-items-lg-center" id="contact">
+        <a href="About.html" id="back">
+            <svg width="120" height="100" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="triangles">
+                  <g id="lightGroup">
+                    <path
+                      id="light1"
+                      opacity="0.6"
+                      d="M53.4872 46.3509C55.7436 47.6536 55.7436 50.9105 53.4872 52.2132L13.718 75.174C11.4615 76.4767 8.64104 74.8483 8.64104 72.2428L8.64104 26.3213C8.64104 23.7158 11.4616 22.0874 13.718 23.3901L53.4872 46.3509Z"
+                    />
+                  </g>
+                  <g id="darkGroup">
+                    <path
+                      id="dark1"
+                      opacity="0.8"
+                      d="M74.9231 46.915C77.1795 48.2177 77.1795 51.4746 74.9231 52.7773L34.3077 76.2266C32.0513 77.5294 29.2308 75.9009 29.2308 73.2955L29.2308 26.3968C29.2308 23.7914 32.0513 22.1629 34.3077 23.4657L74.9231 46.915Z"
+                    />
+                    <path
+                      id="dark2"
+                      opacity="0.8"
+                      d="M54.6154 46.915C56.8718 48.2177 56.8718 51.4746 54.6154 52.7773L14 76.2266C11.7436 77.5294 8.92307 75.9009 8.92307 73.2955L8.92308 26.3968C8.92308 23.7914 11.7436 22.1629 14 23.4657L54.6154 46.915Z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </a>
         <span class="col-8 p-0">
-            <div class="col-6 p-0 m-0 float-left column">
-                <form action="" method="POST" class="col-8 p-0 mx-auto" autocomplete="off">
-                    <h1 class="text-light mt-3">Send me a message</h1>
+            <!--Right column-->
+            <div class="col-lg-6 col-md-12 p-0 m-0 float-lg-right clear-both column" style="background:white;">
+                <div class="col-9 p-0 mx-auto">
+                    <h1 class="text-dark mt-3 text-lg-left text-sm-center">Contact me <div class="short_underline ml-2 col-lg-1 col-12 "></div></h1>
+                    <p class="lead d-lg-inline-block d-none ">
+                        If you have any question to ask me, feel free to send me a mail 
+                    </p>
+                    <div class="links d-lg-block d-flex justify-content-around">
+                        <div class="my-lg-5 my-4" data-href="tel:+48 731 164 787">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telephone-fill mr-lg-2 my-2" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                            </svg>
+                            <span style="box-shadow: none;" class="lead d-lg-inline-block d-none">+48 731 164 787</span></div>
+                        <div class="my-lg-5 my-4" data-href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope-fill mr-lg-2 my-2" viewBox="0 0 16 16">
+                              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                            </svg>
+                          <span style="box-shadow: none;" class="lead d-lg-inline-block d-none">witczak.dawid.2gp@gmail.com</span></div>
+                        <div class="my-lg-5 my-4" data-href="https://www.google.pl/maps/place/Tadeusza+Bora-Komorowskiego+6,+63-100+Śrem/@52.0774235,17.0056029,17z/data=!3m1!4b1!4m5!3m4!1s0x470500cfb2778c4f:0x4e4c36f4ab5c5437!8m2!3d52.0774235!4d17.0077969">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-pin-map-fill mr-lg-2 my-2" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"/>
+                                <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
+                            </svg>
+                            <span style="box-shadow: none;" class="lead d-lg-inline-block d-none">ul. Komorowskiego 6/203, Śrem <br>63-100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Left column-->
+            <div class="col-lg-6 col-md-12 p-0 m-0 float-left column" style="max-height: 100%;">
+                <form action="" method="POST" class="col-8 p-0 mx-auto" autocomplete="off" id="form">
+                    <h1 class="text-light mt-3 text-lg-left text-sm-center">Send me a message</h1>
                     <div class="wrapper my-3 col-12 px-0">
                         <div class="input-data">
                            <input type="text" name="name" class="col-12 p-0" required>
@@ -83,15 +163,13 @@
                             <div class="underline" class="col-6"></div>
                             <label>Message<br></label>
                      </div>
-                     <div class="col-12 text-center m-0 p-0">
-                        <button class="btn mx-auto p-2 text-muted">Send</button>
-                    </div>
+                     
                 </form> 
-                    
+                <div class="col-12 text-center m-0 p-0">
+                    <button class="btn mx-auto p-2 text-muted" form="form">Send</button>
+                </div>
             </div>
-            <div class="col-6 p-0 m-0 float-left">
-                
-            </div>
+
         </span>
     </main>
     <script src="js/jquery.js"></script>
@@ -109,7 +187,6 @@
             button.appendChild(circle);
             setTimeout(()=>{
                 circle.remove();
-                $("button").closest("form").submit();
             },1000)
 
         })
@@ -117,6 +194,9 @@
         $("textarea").on("change",()=>{
             $(".textarea").children("label").toggleClass("text-light",$("textarea").val()!="")
             $(".textarea").children("div").toggleClass("valid",$("textarea").val()!="");
+        })
+        $(".links").children().each((index,element)=>{
+            $(element).wrap("<a href='"+$(element).attr("data-href")+"'></a>")
         })
     </script>
 

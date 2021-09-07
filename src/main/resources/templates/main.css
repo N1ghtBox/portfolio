@@ -103,6 +103,9 @@ main{
         border-top: 5px solid var(--main-purple);
         height:35vh;
     }
+    .project div:last-child span{
+        font-size: 7vw;
+    }
     .project div:last-child img{
         width:100%;
     }
@@ -124,6 +127,7 @@ main{
         border-right: 5px solid var(--main-purple);
     }
 }
+
 .blur{
     filter: grayscale(100%) blur(4px);
 }
@@ -233,6 +237,9 @@ textarea:hover{
 }
 .textarea textarea{
   display: block;
+  min-height: 10vh;
+  max-height: 25vh;
+  height:20vh;
 }
 .textarea label{
   top:0;
@@ -242,4 +249,58 @@ textarea:hover{
 }
 textarea:focus ~ label{
   color: white;
+}
+.short_underline{
+    background: linear-gradient(263deg, rgba(2,0,36,1) 0%, rgba(227,0,0,1) 0%, rgba(255,87,0,1) 100%);
+    position:absolute;
+    height: 2px;
+}
+.links div{
+    display:flex;
+    align-items: center;
+    overflow-wrap: break-word;
+}
+.links div span{
+    height:100%;
+    overflow-wrap: break-word;
+    width: 80%;
+}
+.links a,
+.links a:hover{
+    color:black;
+    text-decoration: none;
+}
+svg #darkGroup path{
+    fill: #1404f0;
+}
+svg #lightGroup path{
+    fill:#555fee;
+}
+#dark2,
+#dark1,
+#light1{
+    transition: all 1s ease;
+}
+#dark2{
+    transform: translate(-100%);
+    opacity: 0;
+}
+svg:hover #dark2{
+    transform: translate(10%);
+    opacity:0.8;
+}
+svg:hover #light1{
+    transform: translate(20%);
+}
+svg:hover #dark1{
+    transform: translate(50%);
+    opacity: 0;
+}
+#back{
+    transform: scaleX(-1);
+    position: absolute;
+    z-index: auto;
+    pointer-events:all;
+    top:0;
+    left:-2%;
 }
